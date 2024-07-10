@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: master # Ensure this matches the branch you are working on
+
+media_folder: "img" # Using the existing img folder for uploads
+public_folder: "/img" # Public URL for accessing the media files
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Index"
+        name: "index"
+        file: "index.html" # Ensure this path matches the location of your index.html file
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
